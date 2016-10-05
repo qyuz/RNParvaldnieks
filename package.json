@@ -1,0 +1,25 @@
+{
+  "name": "nw-notification-demo",
+  "main": "app.html",
+  "window": {
+    "show": true,
+    "frame": true,
+    "toolbar": true,
+    "icon": "app.icns",
+    "width": 550,
+    "height": 470
+  },
+  "repository": "https://github.com/zcbenz/nw-sample-apps",
+  "scripts": {
+    "start": "nw ."
+  },
+  "dependencies": {
+    "angular": "1.5.7",
+    "bootstrap": "3.3.6",
+	"jquery": "3.1.0",
+    "moment": "2.14.1",
+    "ng-table": "1.0.0",
+    "node-notifier": "^4.2.1",
+    "nw-notify": "0.2.0"
+  }
+}

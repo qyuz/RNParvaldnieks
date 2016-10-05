@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Helvetica Neue, Lucida Grande, Segoe UI, Tahoma, sans;
+  font-size: 16px;
+  background: #EDEDED;
+}
+
+.table__date {
+  width: 120px!important;
+}
+
+.table__type {
+  width: 265px;
+}
+
+.table__contact {
+  width: 205px;
+}

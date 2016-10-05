@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NW.js Notifications Test</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/ng-table/dist/ng-table.min.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="node_modules/ng-table/dist/ng-table.min.js"></script>
+    <script src="modules.js"></script>
+    <script src="rnparvaldnieksService.js"></script>
+    <script src="rnparvaldnieksParserService.js"></script>
+    <script src="maintenanceService.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="rnpApp">
+    <div ng-controller="rnpController">
+        {{ test }}
+        <table ng-table="tableParams" class="table" show-filter="true">
+            <tr ng-repeat="row in $data">
+                <td data-title="'From'" header-class="'table__date'" filter="{ from: 'text'}" sortable="'from'">
+                    {{ row.from | date: 'yy-MM-dd HH:mm' }}</td>
+                <td data-title="'To'" header-class="'table__date'" filter="{ to: 'text'}" sortable="'to'">
+                    {{ row.to | date: 'yy-MM-dd HH:mm' }}</td>
+                <td data-title="'Type'" header-class="'table__type'" ng-attr-title="{{ row.type }}"  filter="{ type: 'text'}" sortable="'type'">
+                    {{ row.type }}</td>
+                <td data-title="'Address'" filter="{ address: 'text'}" sortable="'address'">
+                    {{ row.address }}</td>
+                <td data-title="'Contact'" header-class="'table__contact'" filter="{ contact: 'text'}" sortable="'contact'">
+                    {{ row.contact }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
